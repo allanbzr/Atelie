@@ -11,7 +11,7 @@ class participanteController extends Controller
 
     public function index()
     {
-        $participante = Participante::paginate(15);
+        $participante = Participante::all();
         return ParticipanteResource::collection($participante);
     }
 

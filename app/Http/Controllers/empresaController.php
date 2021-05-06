@@ -10,7 +10,7 @@ class empresaController extends Controller
 {
     public function index()
     {
-        $empresa = Empresa::paginate(15);
+        $empresa = Empresa::all();
         return EmpresaResource::collection($empresa);
     }
 

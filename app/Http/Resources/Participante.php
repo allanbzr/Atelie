@@ -3,6 +3,7 @@
 namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
+use App\Models\Empresa;
 
 class Participante extends JsonResource
 {
@@ -15,7 +16,7 @@ class Participante extends JsonResource
             'name' => $this->name,
             'email' => $this->email,
             'birth' => $this->birth,
-            'id_company' => $this->id_company
+            'company_name' => Empresa::find($this->id_company)->name
         ];
     }
 }
